@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const List1 = ['Arjun', 'Adwait', 'Swapnil', 'Amit', 'Vishal', 'Adnan'];
+        const List2 = ['Adwait', 'Laxman', 'Amit', 'Adnan', 'Nitin', 'Gaurav'];
+
+        const uniqueUserList1 = new Set(List1.filter(user =>!List2.includes(user)));
+        const uniqueUserList2 = new Set(List2.filter(user =>!List1.includes(user)));
+        const commonUser = new Set(List1.filter(user =>List2.includes(user)));
+
+        console.log('Unique users from List1 not in List2:',uniqueUserList1);
+        console.log('Unique users from List2 not in List1:',uniqueUserList2);
+        console.log('Users present in both List1 and List2:',commonUser);
+
+    </script>
+</body>
+</html>
